@@ -143,6 +143,54 @@
 </a>
   </div>
 </section>
+<footer></section>
+
+<section id="quote" class="section quote-section">
+
+  <p class="small-title">GET A QUOTE</p>
+
+  <h2>Tell Us About Your Project</h2>
+
+  <p>
+    Fill out the form below and we'll contact you on WhatsApp.
+  </p>
+
+  <form class="quote-form" onsubmit="sendToWhatsApp(); return false;">
+
+    <input
+      type="text"
+      id="customerName"
+      placeholder="Your Name"
+      required>
+
+    <input
+      type="email"
+      id="customerEmail"
+      placeholder="Your Email"
+      required>
+
+    <select id="service" required>
+      <option value="">Select a Service</option>
+      <option value="Website Design">Website Design</option>
+      <option value="Digital Solutions">Digital Solutions</option>
+      <option value="Digital Marketing">Digital Marketing</option>
+      <option value="Other">Other</option>
+    </select>
+
+    <textarea
+      id="message"
+      placeholder="Tell us about your project"
+      rows="5"
+      required></textarea>
+
+    <button type="submit" class="btn whatsapp">
+      💬 Send on WhatsApp
+    </button>
+
+  </form>
+
+</section>
+
 <footer>
   <h3>Paris Services</h3>
   <p>
