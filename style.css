@@ -169,4 +169,56 @@ height: 200px;
   border: none;
   cursor: pointer;
   font-size: 16px;
+}/* REVIEWS */
+
+.reviews {
+  background: #ffffff;
+}
+
+.reviews-container {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 45px;
+  flex-wrap: wrap;
+}
+
+.review-card {
+  width: 300px;
+  padding: 30px 25px;
+  background: #f7f7f7;
+  border-radius: 15px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+
+.review-card:hover {
+  transform: translateY(-6px);
+}
+
+.stars {
+  font-size: 22px;
+  letter-spacing: 3px;
+  margin-bottom: 15px;
+}
+
+.review-card p {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.review-card h3 {
+  font-size: 16px;
+}
+
+@media (max-width: 700px) {
+  .reviews-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .review-card {
+    width: 100%;
+    max-width: 350px;
+  }
 }
