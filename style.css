@@ -1,142 +1,286 @@
-.card img {
-width: 100%;
-height: 180px;
-object-fit: cover;
-border-radius: 10px;
-margin-bottom: 20px;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.about-content {
-max-width: 1100px;
-margin: auto;
-display: flex;
-align-items: center;
-gap: 50px;
-text-align: left;
+html {
+  scroll-behavior: smooth;
 }
 
-.about-content > div {
-flex: 1;
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #222;
+  background: #fff;
 }
 
-.about-content > img {
-width: 45%;
-max-width: 500px;
-height: 350px;
-object-fit: cover;
-border-radius: 15px;
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 8%;
+  background: #111827;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-@media (max-width: 700px) {
-
-.about-content {
-flex-direction: column;
-text-align: center;
+.logo {
+  font-size: 24px;
+  font-weight: bold;
 }
 
-.about-content > img {
-width: 100%;
-height: 280px;
+.nav-links {
+  display: flex;
+  gap: 25px;
 }
 
-.card img {
-height: 200px;
-}
-}/* PRICING */
-
-.pricing {
-  background: #f5f5f5;
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
 }
 
-.pricing-container {
+.nav-links a:hover {
+  color: #25d366;
+}
+
+.hero {
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #111827, #1e3a8a);
+  color: white;
+}
+
+.hero-content {
+  max-width: 800px;
+}
+
+.welcome,
+.small-title {
+  color: #25d366;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.hero h1 {
+  font-size: 52px;
+  line-height: 1.15;
+  margin-bottom: 25px;
+}
+
+.hero-text {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.buttons {
   display: flex;
   justify-content: center;
-  gap: 25px;
-  margin-top: 45px;
+  gap: 15px;
   flex-wrap: wrap;
 }
 
-.price-card {
-  width: 300px;
-  padding: 35px 25px;
-  background: white;
-  border-radius: 15px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-  transition: 0.3s;
+.btn {
+  display: inline-block;
+  padding: 13px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
 }
 
-.price-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+.primary {
+  background: #2563eb;
+  color: white;
+}
+
+.primary:hover {
+  background: #1d4ed8;
+}
+
+.whatsapp {
+  background: #25d366;
+  color: white;
+}
+
+.whatsapp:hover {
+  background: #1ebe5d;
+}
+
+.section {
+  padding: 80px 8%;
+  text-align: center;
+}
+
+.section h2,
+.about h2 {
+  font-size: 38px;
+  margin-bottom: 40px;
+}
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  padding-bottom: 25px;
+}
+
+.card img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+}
+
+.card h3 {
+  margin: 20px 15px 10px;
+}
+
+.card p {
+  padding: 0 20px;
+  color: #555;
+}
+
+.pricing {
+  background: #f5f7fa;
+}
+
+.pricing-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.price-card {
+  background: white;
+  padding: 35px 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
 }
 
 .price-card h3 {
-  font-size: 23px;
-  margin-bottom: 15px;
+  font-size: 24px;
 }
 
 .price {
   font-size: 32px;
   font-weight: bold;
-  margin-bottom: 15px;
+  color: #2563eb;
+  margin: 15px 0;
 }
 
 .price-card p:not(.price) {
-  color: #666;
   margin-bottom: 25px;
-}
-
-.price-card .btn {
-  margin-top: 10px;
+  color: #555;
 }
 
 .featured {
-  border: 3px solid #111;
-  transform: scale(1.03);
+  border: 3px solid #2563eb;
 }
 
-@media (max-width: 700px) {
-  .pricing-container {
-    flex-direction: column;
-    align-items: center;
-  }
+.reviews-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  max-width: 1100px;
+  margin: auto;
+}
 
-  .price-card {
-    width: 100%;
-    max-width: 350px;
-  }
+.review-card {
+  background: #f5f7fa;
+  padding: 30px;
+  border-radius: 12px;
+}
 
-  .featured {
-    transform: none;
-  }
-}/* FLOATING WHATSAPP BUTTON */
+.stars {
+  color: #f5b301;
+  font-size: 22px;
+  margin-bottom: 15px;
+}
 
-.floating-whatsapp {
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
-  background: #25d366;
+.review-card h3 {
+  margin-top: 20px;
+}
+
+.about {
+  padding: 80px 8%;
+  background: #111827;
   color: white;
-  padding: 14px 20px;
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: bold;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  z-index: 9999;
 }
 
-.floating-whatsapp:hover {
-  transform: translateY(-3px);
+.about-content {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 50px;
 }
-/* GET A QUOTE FORM */
+
+.about h2 {
+  margin-bottom: 20px;
+}
+
+.about-content p {
+  margin-bottom: 25px;
+}
+
+.profile-photo img {
+  width: 100%;
+  max-width: 450px;
+  display: block;
+  margin: auto;
+  border-radius: 15px;
+}
+
+.contact {
+  background: #f5f7fa;
+}
+
+.contact-box {
+  max-width: 600px;
+  margin: 30px auto 0;
+  background: white;
+  padding: 35px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.contact-box p {
+  margin-bottom: 20px;
+}
+
+.contact-box a:not(.btn) {
+  color: #2563eb;
+  text-decoration: none;
+}
 
 .quote-section {
-  background: #f5f5f5;
+  background: white;
 }
 
 .quote-form {
-  max-width: 600px;
-  margin: 35px auto 0;
+  max-width: 650px;
+  margin: 30px auto;
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -150,75 +294,82 @@ height: 200px;
   border: 1px solid #ddd;
   border-radius: 8px;
   font-size: 16px;
-  font-family: Arial, Helvetica, sans-serif;
-  background: white;
+  font-family: inherit;
 }
 
 .quote-form textarea {
   resize: vertical;
 }
 
-.quote-form input:focus,
-.quote-form select:focus,
-.quote-form textarea:focus {
-  outline: none;
-  border-color: #111;
-}
-
 .quote-form button {
-  border: none;
-  cursor: pointer;
-  font-size: 16px;
-}/* REVIEWS */
-
-.reviews {
-  background: #ffffff;
-}
-
-.reviews-container {
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-  margin-top: 45px;
-  flex-wrap: wrap;
-}
-
-.review-card {
-  width: 300px;
-  padding: 30px 25px;
-  background: #f7f7f7;
-  border-radius: 15px;
-  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
-  transition: 0.3s;
-}
-
-.review-card:hover {
-  transform: translateY(-6px);
-}
-
-.stars {
-  font-size: 22px;
-  letter-spacing: 3px;
-  margin-bottom: 15px;
-}
-
-.review-card p {
-  color: #555;
-  margin-bottom: 20px;
-}
-
-.review-card h3 {
   font-size: 16px;
 }
 
-@media (max-width: 700px) {
-  .reviews-container {
+footer {
+  background: #0b1120;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+footer h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.copyright {
+  margin-top: 20px;
+  color: #aaa;
+}
+
+.floating-whatsapp {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background: #25d366;
+  color: white;
+  padding: 14px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  z-index: 9999;
+}
+
+@media (max-width: 800px) {
+
+  nav {
     flex-direction: column;
-    align-items: center;
+    gap: 15px;
   }
 
-  .review-card {
-    width: 100%;
+  .nav-links {
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero h1 {
+    font-size: 38px;
+  }
+
+  .services,
+  .pricing-container,
+  .reviews-container,
+  .about-content {
+    grid-template-columns: 1fr;
+  }
+
+  .section,
+  .about {
+    padding: 60px 6%;
+  }
+
+  .about-content {
+    text-align: center;
+  }
+
+  .profile-photo img {
     max-width: 350px;
   }
 }
